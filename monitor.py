@@ -5,9 +5,8 @@ IP_FORCA_BRUTA = '45.33.32.156'
 IP_BOT         = '66.249.66.1'
 NOME_ARQUIVO   = 'log.txt'
 
-# ============================================================
 # PARTE 1 - GERAR LOGS
-# ============================================================
+
 
 def gerar_logs(quantidade):
     with open(NOME_ARQUIVO, 'w', encoding='UTF-8') as arq:
@@ -89,10 +88,7 @@ def escolher_tempo(i, total, status):
 
     return random.randint(50, 1999)
 
-
-# ============================================================
 # PARTE 2 - ANALISAR LOGS
-# ============================================================
 
 def analisar_logs():
     total = total_200 = total_403 = total_404 = total_500 = 0
@@ -228,7 +224,7 @@ def analisar_logs():
     print('          RELATORIO - MONITOR LOGPY')
     print('=' * 52)
     print('VISAO GERAL')
-    print('  Total de acessos:          ' + str(total))
+    print('  Total de acessos: ' + str(total))
     print('  Sucessos (200):            ' + str(total_200))
     print('  Total de erros:            ' + str(total_erros))
     print('  Erros criticos (500):      ' + str(total_500))
@@ -236,7 +232,7 @@ def analisar_logs():
     print('  Taxa de erro:              ' + str(round(taxa_erro, 2)) + '%')
     print('\nDESEMPENHO')
     print('  Tempo medio:               ' + str(round(tempo_medio, 2)) + 'ms')
-    print('  Maior tempo:               ' + str(maior_tempo) + 'ms')
+    print('  Maior tempo:  ' + str(maior_tempo) + 'ms')
     print('  Menor tempo:               ' + str(menor_tempo) + 'ms')
     print('  Rapidos (<200ms):          ' + str(rapidos))
     print('  Normais (200-799ms):       ' + str(normais))
@@ -278,10 +274,7 @@ def extrair_campos(linha):
     except:
         return None
 
-
-# ============================================================
 # PARTE 3 - MENU
-# ============================================================
 
 def menu():
     while True:
